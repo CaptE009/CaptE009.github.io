@@ -1,0 +1,714 @@
+/* Resetting margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background for modern look */
+    color: #f1f1f1; /* Light text for contrast */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+/* Header Styles (Sticky Top Bar) */
+header {
+    position: sticky; /* Make it sticky */
+    top: 0; /* Stick to the top of the page */
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it appears above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212; /* Black background */
+    color: #FFBF00; /* Modernized yellow color */
+    padding: 15px 40px; /* Larger padding initially */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: padding 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Shrinking Header on Scroll */
+header.shrink {
+    padding: 10px 40px; /* Reduce padding when scrolling */
+    background-color: #1a1a1a; /* Darker background when scrolling */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+
+header .logo-container img {
+    width: 150px; /* Adjust logo size */
+    transition: width 0.3s ease; /* Smooth transition for logo resize */
+}
+
+header.shrink .logo-container img {
+    width: 100px; /* Smaller logo when scrolling */
+}
+
+/* Navigation Styles */
+header nav ul {
+    list-style-type: none; /* Ensure no bullet points */
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    margin-left: auto;
+    padding: 0; /* Ensure no extra padding around the list */
+    transition: display 0.3s ease;
+}
+
+header nav ul li {
+    margin: 0 10px; /* Add space between items */
+}
+
+header nav ul li a {
+    color: #FFBF00; /* Yellow text */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 20px; /* Reduced padding inside the box */
+    border: 2px solid #FFBF00; /* Border to create the box effect */
+    border-radius: 8px; /* Optional: rounded corners for the box */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover effect on the navigation items */
+header nav ul li a:hover {
+    background-color: #FFD700; /* Lighter yellow background on hover */
+    color: #121212; /* Change text color to black */
+}
+
+/* Mobile Navigation Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #FFBF00;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Mobile Navigation Menu */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #121212;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    /* Show the hamburger menu on small screens */
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Add a smooth transition for shrinking header */
+@media (max-width: 768px) {
+    header.shrink {
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    background-color: #FFBF00; /* Yellow background */
+    color: #121212; /* Black text */
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    background-color: #121212; /* Black button */
+    padding: 12px 27px;
+    color: #FFBF00; /* Yellow text */
+    text-decoration: none;
+    font-weight: 725;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #FFD700; /* Lighter yellow */
+    transform: scale(1.05);
+}
+
+
+
+/* About me image */
+.about-img {
+    width: 750px;
+    height: 100%;
+    border-radius: 5px;
+    border: 1.5px solid #444;
+}
+
+
+/* Mobile Responsiveness for About me Section */
+@media (max-width: 768px) {
+        
+    .about-img {
+        width: 450px;
+        height: 100%;
+        border-radius: 5px;
+        border: 1.5px solid #444;
+    }
+    }
+
+
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #FFBF00; /* Yellow header */
+    margin-bottom: 40px;
+}
+
+.section p {
+    font-size: 1.2em;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: #f1f1f1;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li:before {
+    content: ""; /* Removed the bullet by setting the content to nothing */
+}
+
+
+
+
+
+/* Team Section */
+.team-members {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 40px; /* Space between other sections */
+    
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    /*gap: 30px; /* Controls both vertical and horizontal spacing */
+    
+    row-gap: 100px; /* Increase vertical spacing between rows */             
+    column-gap: 7px; /* Maintain the existing horizontal spacing */   
+
+    max-width: 1200px; /* Limit width of the grid */
+    margin: 0 auto; /* Center the grid */
+    transform: translateX(40px); /* Shift grid 20px to the right */
+}
+
+.team-member {
+    background-color: #1f1f1f;
+    padding: 25px;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+.team-member img {
+    width: 200px; /* Fixed size for uniformity */
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover; /* Ensures the images fit well */
+}
+
+.team-member ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    color: #f1f1f1;
+    font-size: 1.1em;
+}
+.team-member h3 {
+    font-size: 1.5em;
+    color: #FFBF00; /* Yellow */
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #f1f1f1;
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .team-members {
+        grid-template-columns: repeat(2, 1fr); /* 2 members per row */
+    }
+
+    .team-member {
+        width: 90%;
+        height: 90%;
+        margin-bottom: 25px;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+
+/* Sponsors Section */
+#sponsor-tiers {
+    background-color: #121212; /* Dark background for contrast */
+    color: #f1f1f1; /* Light text for readability */
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.tiers {
+    display: flex;
+    flex-direction: column; /* Stack each tier on its own row */
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px; /* Space between other sections */
+}
+
+#sponsor-tiers .tier {
+    width: 100%; /* Expand to container width */
+    max-width: 1200px; /* Wider max-width for larger tiers */
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    border: 2px solid transparent; /* Highlight tiers if needed */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Platinum Tier */
+#sponsor-tiers .platinum {
+    width: 95%; /* Nearly full width */
+    font-size: 2em; /* Largest font size */
+    border-color: #E5E4E2; /* Platinum border */
+    background-color: #1a1a1a; /* Slightly lighter background for contrast */
+    box-shadow: 0 8px 15px rgba(229, 228, 226, 0.5); /* Strong glow effect */
+    padding: 40px 30px; /* More padding for prominence */
+    max-width: 1400px; /* Even wider for Platinum */
+}
+
+/* Gold Tier */
+#sponsor-tiers .gold {
+    width: 90%; /* Slightly narrower than Platinum */
+    font-size: 1.7em; /* Slightly smaller font */
+    border-color: #FFD700; /* Gold border */
+    background-color: #181818; /* Slightly darker background */
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.4); /* Softer glow */
+    padding: 35px 25px; /* Reduced padding */
+    max-width: 1300px; /* Slightly narrower than Platinum */
+}
+
+/* Silver Tier */
+#sponsor-tiers .silver {
+    width: 85%; /* Narrower than Gold */
+    font-size: 1.4em; /* Smaller font */
+    border-color: #C0C0C0; /* Silver border */
+    background-color: #161616; /* Slightly darker */
+    box-shadow: 0 4px 8px rgba(192, 192, 192, 0.3); /* Subtle shadow */
+    padding: 30px 20px; /* Reduced padding */
+    max-width: 1200px; /* Narrower box */
+}
+
+/* Bronze Tier */
+#sponsor-tiers .bronze {
+    width: 80%; /* Narrowest tier */
+    font-size: 1.2em; /* Smallest font */
+    border-color: #CD7F32; /* Bronze border */
+    background-color: #141414; /* Darker background */
+    box-shadow: 0 2px 4px rgba(205, 127, 50, 0.2); /* Minimal shadow */
+    padding: 25px 15px; /* Minimal padding */
+    max-width: 1100px; /* Narrowest box */
+}
+
+/* Logo Area */
+.logo-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.sponsor-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    border: 1.5px solid #444;
+}
+
+/* Mobile Responsiveness for Sponsors Section */
+@media (max-width: 768px) {
+    #sponsor-tiers .tier {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .logo-area {
+        justify-content: center;
+    }
+
+    .sponsor-logo {
+        width: 80px; /* Adjust logo size for smaller screens */
+    }
+}
+
+
+
+/* Outreach Section */
+
+.outreach-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    color: #f1f1f1;
+    font-size: 1.1em;
+    margin-left: 315px;
+}
+
+.outreach-img {
+    width: 750px;
+    height: 100%;
+    border-radius: 5px;
+    border: 1.5px solid #444
+}
+
+@media (max-width: 768px) {
+    .outreach-list ul {
+        margin-left: 10px;
+    }
+}
+
+
+/* Rotating Banner */
+.rotating-banner {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  .banner-container {
+    display: flex;
+    gap: 20px;
+    animation: scroll-banner 20s linear infinite;
+    will-change: transform; /* Optimize for animation */
+  }
+  
+  .banner-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .banner-container img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Animation */
+  @keyframes scroll-banner {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-220px * 6)); /* Account for duplicate images */
+  }
+}
+
+
+
+/* Instagram Feed Section */
+#instagram-feed {
+    padding: 60px 20px;
+    background-color: #121212; /* Match other sections' background */
+    text-align: center;
+    color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+#instagram-feed h2 {
+    color: #FFBF00; /* Consistent yellow text */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.instagram-post {
+    max-width: 400px;
+    margin: 0 auto; /* Center the embed */
+    border: 2px solid #FFBF00; /* Add a border for emphasis */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent content from spilling out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+}
+
+.instagram-post blockquote {
+    margin: 0; /* Remove default blockquote margins */
+}
+
+.instagram-post iframe, 
+.instagram-post .instagram-media {
+    max-width: 100%; /* Ensure responsiveness */
+    width: 100%; /* Match container width */
+    height: auto;
+}
+
+
+
+
+/* Instagram Section */
+#instagram-feed {
+    background-color: #121212; /* Dark background matching the theme */
+    color: #f1f1f1; /* Light text for readability */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #333; /* Slight separation */
+}
+
+#instagram-feed h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold highlight for the title */
+}
+
+#instagram-feed p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #ccc; /* Subdued text color for the description */
+}
+
+#instagram-feed .instagram-container {
+    max-width: 400px; /* Limit the container width */
+    margin: 0 auto; /* Center the iframe */
+    border: 2px solid #444; /* Subtle border around the embed */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Keep iframe tidy within the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow effect */
+}
+
+#instagram-feed iframe {
+    width: 100%; /* Full width for responsiveness */
+    height: 500px; /* Fixed height for consistency */
+    border: none; /* Remove default iframe border */
+}
+
+
+
+
+
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #instagram-feed {
+        padding: 40px 15px; /* Adjust padding for mobile */
+    }
+
+    #instagram-feed h2 {
+        font-size: 2em; /* Smaller heading for mobile */
+    }
+
+    .instagram-post {
+        max-width: 100%; /* Make embed take full width on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 20px; /* Adjusted padding for tablets */
+    }
+
+    /* Flexbox - keep the menu horizontally aligned */
+    header nav ul {
+        width: auto;
+        justify-content: space-between;
+    }
+
+    .hero {
+        padding: 80px 20px; /* Less padding for tablets */
+    }
+
+    .section {
+        padding: 40px 20px; /* Reduced padding for mobile */
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .robot-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .robot-gallery img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 60px 20px; /* Less padding for mobile */
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Smaller headline on mobile */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Smaller text on mobile */
+    }
+
+    .cta-button {
+        padding: 12px 25px; /* Smaller buttons on mobile */
+    }
+
+    .section {
+        padding: 30px 15px; /* Reduced padding for mobile */
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 90%;
+        margin-bottom: 25px;
+    }
+
+    .robot-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .robot-gallery img {
+        max-width: 90%; /* Ensure images don't overflow */
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form button {
+        padding: 12px 25px; /* Smaller button for mobile */
+    }
+}

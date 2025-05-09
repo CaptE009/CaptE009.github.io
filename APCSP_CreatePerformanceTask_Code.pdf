@@ -1,0 +1,50 @@
+import random 
+import string
+
+def generate_pass(amount):
+
+    #adds context for user
+    print("We are going to prompt you to create a password " + str(amount), "times, you may then select which one is most fitting to you!")
+    
+    #user parameter to decide how many different passwords they get
+    for i in range(amount):
+
+        #used to add random characters and make up final password
+        random_password = [ ]
+
+        #holds the data needed for randomization
+        randomizer_list = [string.digits, string.ascii_lowercase, string.punctuation, string.ascii_uppercase]
+
+        #utilized to ensure loop runs the correct amount of times
+        count = 0
+
+        #user input for length
+        password_length = int(input("How long would you like your new password to be? Numbers # only: "))
+
+        #reprompts user input to ensure that value is greater than 8
+        while password_length < 8:
+            password_length = int(input("Please enter a positive digit greater than or equal to 8. Passwords under 8 characters aren't up to safety standards."))
+        
+        #Randomization element derived from list
+        while count < password_length: 
+            initial_pick = random.choice(randomizer_list)
+            final_pick = random.choice(initial_pick)
+            #clears any symbols that may not typically be allowed in passwords
+            while final_pick == (',', '`'): 
+                final_pick = random.choice(initial_pick)
+                if final_pick != (',', '`'):
+                    break
+
+           #adds the randomized character to the list         
+            random_password.append(final_pick)
+            count += 1
+
+        #combines the characters in the list to form the password
+        print("Your new password is", ''.join(random_password))
+
+#statement that educates the user about security, leads up to function call
+print("In today's world, where cybersecurity plays a significant part in our daily lives, it is often overlooked by many. This password generator is meant to help you " \
+"pick a safe and strong password to use for anything from video games, to school/work accounts, to emails, etc.")
+print("Your passwords are always recommended to be over 8 characters long to be up to security standards, changed often, and stored somewhere safely where it doesn't end up in the wrong hands. ")
+generate_pass(5)
+

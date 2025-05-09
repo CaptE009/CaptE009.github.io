@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FTC Robotics Team 4707</title>
+  <style>
+    /* Enable smooth scrolling for the entire page */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    /* Navigation Bar (Header) */
+    header {
+      background-color: #1f1f1f;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Navigation list */
+    header nav ul {
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      height: 100%;
+    }
+
+    /* Navigation list items */
+    header nav ul li {
+      margin: 0 10px; /* Adjust margin between items */
+    }
+
+    /* Navigation links (Inside individual boxes) */
+    header nav ul li a {
+      color: #FFBF00;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 10px 20px; /* Add padding inside each box */
+      border: 2px solid #FFBF00; /* Add a border to create a box */
+      border-radius: 8px; /* Optional: rounded corners for the box */
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    /* Hover effect on the links */
+    header nav ul li a:hover {
+      background-color: #FFBF00; /* Yellow background on hover */
+      color: #121212; /* Change text color on hover */
+    }
+
+    /* Optional: Add space between the boxes */
+    header nav ul li:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 20px;
+      margin-top: 60px;
+    }
+
+    .hero {
+      background-color: #FFBF00;
+      color: #121212;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+    }
+
+    .section h2 {
+      font-size: 2.5em;
+      color: #FFBF00;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    /* Instagram Feed Section */
+    #instagram-feed {
+      padding: 40px 20px;
+      background-color: #121212;
+      text-align: center;
+      color: #fff;
+    }
+
+    #instagram-feed h2 {
+      color: #FFBF00;
+      font-size: 2.5em;
+    }
+
+    .instagram-post iframe {
+      border: none;
+      max-width: 100%;
+      width: 400px;
+      height: 500px;
+      margin-top: 20px;
+    }
+
+    /* Responsive Instagram Feed */
+    @media screen and (max-width: 768px) {
+      .instagram-post iframe {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar (Header) -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#team">Meet the Team</a></li>
+      <li><a href="#robot">Our Robot</a></li>
+      <li><a href="#outreach">Outreach</a></li>
+      <li><a href="#instagram-feed">Instagram</a></li> <!-- Link to Instagram section -->
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <h1>Welcome to Team 4707</h1>
+  <p>We are the Midway Predators, dedicated to building, programming, and competing in FIRST Robotics!</p>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="section">
+  <h2>Meet the Team</h2>
+  <p>Our team is made up of talented engineers, programmers, and outreach specialists.</p>
+</section>
+
+<!-- Robot Section -->
+<section id="robot" class="section">
+  <h2>Our Robot</h2>
+  <p>Check out our robot and the technology behind it.</p>
+</section>
+
+<!-- Outreach Section -->
+<section id="outreach" class="section">
+  <h2>Outreach</h2>
+  <p>Learn more about our community involvement and events.</p>
+</section>
+
+<!-- Instagram Feed Section -->
+<section id="instagram-feed">
+  <h2>Follow Us on Instagram</h2>
+
+  <!-- Instagram Post Embed (Example) -->
+  <div class="instagram-post">
+    <iframe src="https://www.instagram.com/p/POST_ID/embed" width="400" height="500" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  </div>
+
+  <!-- OR Use Third-Party Widget Embed (SnapWidget Example) -->
+  <div class="snapwidget-widget" style="display: inline-block; width: 100%; text-align: center;">
+    <iframe src="https://snapwidget.com/embed/POST_ID" frameborder="0" scrolling="no" allowtransparency="true" style="border: none; overflow: hidden; width: 100%; height: 400px;"></iframe>
+  </div>
+</section>
+
+</body>
+</html>
